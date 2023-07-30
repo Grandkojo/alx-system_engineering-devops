@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#This script prints the files in a current directory
+for file in *
+do
+    if [ -f "$file" ] && [[ "$file" != .* ]] && [[ "$file" == *-* ]]
+    then
+        name_after_dash=${file#*-}
+        echo "$name_after_dash"
+    fi
+done
