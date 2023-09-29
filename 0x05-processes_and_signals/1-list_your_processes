@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-#A  Bash script that displays a list of currently running processes.
+#A Bash script that displays a list of currently running processes.
 
-ps -U "$(whoami)" -e -o pid, ppid, user, %cpu, %mem, cmd --forest
+ps -auxf
