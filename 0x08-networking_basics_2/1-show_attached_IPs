@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # this script shows all ips in a device
+#ip -4 -o addr show | awk '{print $4}' | cut -d "/" -f 1
 
 ifconfig | grep "inet " | awk '{print $2}'
