@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this script shows all ips in a device
+
+ifconfig | grep "inet " | awk '{print $2}'
