@@ -7,10 +7,10 @@ then
 	exit 1
 fi
 
-path = $1
-ip = $2
-username = $3
-key = $4
+path=$1
+ip=$2
+username=$3
+key=$4
 
 scp -o StrictHostKeyChecking=no -i "$key" "$path" "$username@$ip:~/"
 exit 0
