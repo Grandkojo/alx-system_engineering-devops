@@ -1,0 +1,19 @@
+What happens when your type google.com in your browser and press enter?
+
+
+When google.com typed in the search bar and I press enter, there is a Domain Name System (DNS) lookup which is a DNS query to a DNS server for the Internet Protocol (IP) address with the alias or domain name (Google). This is done because it is easier for humans to remember a name rather that a set of numbers separated by dots.eg: the IP address for Google is 142.250.200.110.
+
+So as the search continues, there is also a firewall mounted before the user can be able to see the requested page, this checks if there are no breaches in the request sent such as the page requested is allowed to be accessed by the firewall. If the firewall’s configuration does not allow the requested page, it returns an error (Error 404) basically meaning “page not found”.
+
+Then there’s another check for the transfer protocol if it is secure or not, this essentially tells the browser whether the page the user is requesting secure or it isn’t. It is always the best practice to have a secure transfer protocol for the safety and privacy of the user insecure pages may result in user privacy breach that could harm the user.
+
+If your webpage get a lot of hits per time, you might want to consider having a load balancer to regulate the way requests are distributed to your servers. There are several algorithms for the distribution like the weighted round robin (which is a more common one as compared to the rest). This is also needful to prevent a problem called Single Point of Failure (SPOF), SPOF occurs when a part of the serve system is down resulting in the whole application being down. It delays user’s time and in the long run goes to affect the application as a whole. This is where the load balancer has a primary and a backup server(s) so that if the primary server(s) is down the request could still be passed to the backup server(s).
+
+There are two servers that are mainly used, we have the Web Server and the Application server;
+Web Server: The main role for this server is to handle incoming Hyper Text Transfer Protocol (HTTP) requests. It serves static contents; HTML pages, images and client side scripts, which is then sent back to the user for viewing.
+Application Server: This server takes a whole new dimension, it is designed to execute application logic and business logic. It is responsible for processing dynamic content and interacting with databases. They execute server-side code; eg: PHP, Java, Python.
+
+The database is the main key for the application server or the web server to function properly. It contains all the information to be used for the server in columns and row for easy access and processing.
+
+Once the request is able to reach the database and all the information is gotten, the requested page is the sent back to the client for viewing which can be then used for its intended purpose.
+
