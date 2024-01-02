@@ -24,8 +24,8 @@ def return_employee_info(emp_id):
     task_done = len([task for task in todo_data if task.get("completed")])
     with open(f"{emp_id}.csv", "w") as files:
         for task in todo_data:
-            files.write(f'"{emp_id}, {user_data.get("username")}", '
-                        f'"{task.get("completed")}", {task.get("title")}\n')
+            files.write(f'"{emp_id}","{user_data.get("username")}",'
+                        f'"{task.get("completed")}","{task.get("title")}"\n')
 
 
 #   if task.get('completed')])
