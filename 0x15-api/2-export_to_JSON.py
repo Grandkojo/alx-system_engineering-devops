@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """This is a call to a REST API"""
 
+import json
 import requests
 import sys
-import json
 
 
 def return_employee_info(emp_id):
