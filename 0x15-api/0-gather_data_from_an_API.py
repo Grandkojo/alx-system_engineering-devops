@@ -23,7 +23,7 @@ def return_employee_info(emp_id):
     total_task = len(todo_data)
     task_done = len([task for task in todo_data if task.get('completed')])
     print(f"Employee {user_data.get('name')} is done "
-            f"with tasks({task_done}/{total_task}):")
+          f"with tasks({task_done}/{total_task}):")
 
     for tasks in todo_data:
         if tasks.get('completed'):
