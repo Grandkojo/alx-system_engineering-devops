@@ -1,18 +1,21 @@
 #!/usr/bin/python3
-"""How many subs?"""
+"""
+This is my script to retrieve the number of subscribers
+in a reddit api
+"""
 
-
-import sys
 import requests
 
 
 def number_of_subscribers(subreddit):
-    """Function to return the number of subs"""
+    """
+    This function returns the number of subscribers in subreddit
+    or 0
+    """
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    response = requests.get(url, allow_redirects=False)
-
+    headers = {"User-Agent": "My-Reddit-Script"}
+    response = requests.get(url, headers=headers,
+                            allow_redirects=False)
     if response.status_code != 200:
         return 0
-
-    response_json = response.json()
-    return response_json.get('data').get('subscribers')
+    return response.json().get('data').get('subscribers')
