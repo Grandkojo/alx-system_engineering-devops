@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # This is a puppet manifest to configure ssh
 
 file_line { 'Turn off passwd auth':
